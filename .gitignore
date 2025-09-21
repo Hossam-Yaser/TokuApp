@@ -7,40 +7,14 @@
 .pub/
 build/
 
-# Android related
-android/.gradle/
-android/app/build/
-**/local.properties
-**/GeneratedPluginRegistrant.java
+# Ignore platform-specific folders
+/android/
+/ios/
+/linux/
+/macos/
+/windows/
+/web/
 
-# iOS/Xcode related
-ios/Flutter/Flutter.framework
-ios/Flutter/Flutter.podspec
-ios/Flutter/Generated.xcconfig
-ios/Flutter/ephemeral/
-ios/.symlinks/
-ios/Pods/
-ios/build/
-ios/Runner/GeneratedPluginRegistrant.*
-
-# macOS
-macos/Flutter/GeneratedPluginRegistrant.swift
-macos/Flutter/ephemeral/
-macos/Pods/
-macos/build/
-
-# Windows
-windows/Flutter/ephemeral/
-windows/build/
-
-# Linux
-linux/Flutter/ephemeral/
-linux/build/
-
-# Web
-web/.dart_tool/
-web/.packages
-web/build/
 
 # VS Code
 .vscode/
