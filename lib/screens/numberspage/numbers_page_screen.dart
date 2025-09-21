@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:toku_app/custom_assets/assetsupdate.dart';
 import 'package:toku_app/custom_assets/colors.dart';
-import 'package:toku_app/custom_assets/my_app_images.dart';
-import 'package:toku_app/custom_assets/my_app_sound.dart';
 import 'package:toku_app/screens/widgets/category_veiw_widget.dart';
 
 class NumbersPageScreen extends StatelessWidget {
@@ -22,16 +21,16 @@ class NumbersPageScreen extends StatelessWidget {
         backgroundColor: MyAppColors.appBarColor,
       ),
       body: ListView.builder(
-        itemCount: numbersInEnglish.length,
+        itemCount: numbersItems.length,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(bottom: 1),
             child: CategoryVeiwWidget(
               containerColor: MyAppColors.numbersColor,
-              imagePath: numbersImages[index],
-              numberInJapanese: numbersInJapanese[index],
-              numberInEnglish: numbersInEnglish[index],
-              soundPath: numbersSounds[index],
+              imagePath: numbersItems[index].imagePath.toString(),
+              numberInJapanese: numbersItems[index].imageDescriptionInJapanese,
+              numberInEnglish: numbersItems[index].imageDescriptionInInglish,
+              soundPath: numbersItems[index].soundPath,
             ),
           );
         },
@@ -39,57 +38,3 @@ class NumbersPageScreen extends StatelessWidget {
     );
   }
 }
-
-List<String> numbersInJapanese = [
-  "ichi",
-  "ni",
-  "san",
-  "shi",
-  "go",
-  "roku",
-  "nana",
-  "hachi",
-  "kyu",
-  "ju",
-];
-
-// --------------------------------------------------
-List<String> numbersInEnglish = [
-  "One",
-  "Two",
-  "Three",
-  "Four",
-  "Five",
-  "Six",
-  "Seven",
-  "Eight",
-  "Nine",
-  "Ten",
-];
-// --------------------------------------------------
-List<String> numbersImages = [
-  MyAppImages.numbersOne,
-  MyAppImages.numbersTwo,
-  MyAppImages.numbersThree,
-  MyAppImages.numbersFour,
-  MyAppImages.numbersFive,
-  MyAppImages.numbersSix,
-  MyAppImages.numbersSeven,
-  MyAppImages.numbersEight,
-  MyAppImages.numbersNine,
-  MyAppImages.numbersTen,
-];
-
-// --------------------------------------------------
-List<String> numbersSounds = [
-  MyAppSound.numbersOneSound,
-  MyAppSound.numbersTwoSound,
-  MyAppSound.numbersThreeSound,
-  MyAppSound.numbersFourSound,
-  MyAppSound.numbersFiveSound,
-  MyAppSound.numbersSixSound,
-  MyAppSound.numbersSevenSound,
-  MyAppSound.numbersEightSound,
-  MyAppSound.numbersNineSound,
-  MyAppSound.numbersTenSound,
-];
